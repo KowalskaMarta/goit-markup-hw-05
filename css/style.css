@@ -36,6 +36,7 @@ body {
   --footer-social-bacground: rgba(255, 255, 255, 0.1);
   --box-shadow-galery: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  --img-bacground: rgba(47, 48, 58, 0.8);
 }
 .logo {
   font-family: "Raleway";
@@ -252,6 +253,23 @@ header {
 .doing {
   display: block;
   padding-top: 0px;
+}
+.img-with-title {
+  position: relative;
+  display: inline-flex;
+}
+.img-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: var(--img-bacground);
+  color: var(--btn-lighter);
+  text-transform: uppercase;
+  bottom: 0;
+  padding: 27px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.17;
 }
 .do-galery {
   width: 100%;
