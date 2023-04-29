@@ -142,8 +142,6 @@ body {
   background-color: var(--btn-lighter);
   margin: 0;
   transform: translate(-50%, -50%);
-  transition: transform 2s ease-in;
-  box-shadow: var(--modal-box-shadow);
   border-radius: 4px;
 }
 .icon-close {
