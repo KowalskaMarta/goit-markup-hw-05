@@ -37,6 +37,11 @@ body {
   --box-shadow-galery: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   --img-bacground: rgba(47, 48, 58, 0.8);
+  --backdrop-bg: rgba(0, 0, 0, 0.2);
+  --modal-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --ic-close-border: rgba(0, 0, 0, 0.1);
+  --card-des-bg: rgba(33, 150, 243, 0.9);
 }
 .logo {
   font-family: "Raleway";
@@ -138,8 +143,7 @@ body {
   margin: 0;
   transform: translate(-50%, -50%);
   transition: transform 2s ease-in;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--modal-box-shadow);
   border-radius: 4px;
 }
 .icon-close {
@@ -150,7 +154,7 @@ body {
   right: 0;
   top: 0;
   fill: var(--logo-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--ic-close-border);
   border-radius: 50%;
   cursor: pointer;
   margin: 8px;
@@ -162,7 +166,7 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--backdrop-bg);
 }
 .description-name {
   font-size: 14px;
@@ -403,7 +407,7 @@ header {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(33, 150, 243, 0.9);
+  background: var(--card-des-bg);
   color: var(--btn-lighter);
 }
 .img-container {
@@ -587,6 +591,9 @@ img {
 }
 .footer-social-icon {
   fill: var(--btn-lighter);
+  transition-property: fill, background-color, border-radius;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-links {
   display: flex;
